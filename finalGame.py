@@ -64,26 +64,6 @@ def is_valid_move(game_map, x, y, map_size):
         return True
     return False
 
-# def pick_carrot(game_map, x, y, counter, map_size):
-#     if 0 <= x < map_size and 0 <= y < map_size:
-#         directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
-
-#         if game_map[x][y] == RABBIT:
-#             for dx, dy in directions:
-#                 new_x, new_y = x + dx, y + dy
-#                 if 0 <= new_x < map_size and 0 <= new_y < map_size:
-#                     if game_map[new_x][new_y] == CARROT:
-#                         game_map[x][y], game_map[new_x][new_y] = PATHWAY_STONE, RABBIT_WITH_CARROT
-#                         return counter + 1
-
-#             if game_map[x][y] == RABBIT_WITH_CARROT:
-#                 for dx, dy in directions:
-#                     new_x, new_y = x + dx, y + dy
-#                     if 0 <= new_x < map_size and 0 <= new_y < map_size:
-#                         if game_map[new_x][new_y] == RABBIT_HOLE:
-#                             game_map[x][y] = PATHWAY_STONE
-#                             return counter + 1
-#     return counter
 
 def pick_carrot(game_map, x, y, counter, map_size):
     if 0 < x < map_size-1 and 0 < y < map_size-1:
@@ -317,7 +297,7 @@ def move_rabbit(map,map_size,num_carrots,num_rabbit_holes):
                     os.system('cls')
                     print("Invalid move. Try again.")
     except Exception as e:
-        print("Wrong key press, ", e)
+        print("Wrong key's pressed, ", e)
         print("--------------------")
         print("Restart the game...!")
         print("--------------------")
@@ -338,6 +318,15 @@ def main():
         while num_rabbit_holes <= 1:
             num_rabbit_holes = int(input("Please enter number of holes greater than 1: "))
         
+        print("Controls:")
+        print("a: Move left")
+        print("w: Move up")
+        print("s: Move down")
+        print("d: Move right")
+        print("Combination of the above keys will lead to diagonal movement")
+        print("p: Pick/drop the carrot")
+        print("j: Jump over the hole")
+        print("q: Quit")
         # generate a random map
         map = generate_map(map_size, num_carrots, num_rabbit_holes)
 
