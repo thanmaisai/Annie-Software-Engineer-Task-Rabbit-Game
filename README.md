@@ -34,6 +34,17 @@ Generate a 2D map of more than or equal to 100 characters(based on user input) s
 - Illustrate the solution through a step-by-step emulation on the provided grid, all without the need for any additional input.
 - Below is an illustration of the solution approach within a 1D field.
 
-![](./Annie%20Software%20Engineer%20Task/1.png)
-![](./Annie%20Software%20Engineer%20Task/2.png)
-![](./Annie%20Software%20Engineer%20Task/3.png)
+# Results
+<table>
+  <tr>
+    <td><img src="./Task_results/Game_Intro.png" width="400"></td>
+    <td><img src="./Task_results/custom_input.png" width="400"></td>
+    <td><img src="./Task_results/Screenshot%202023-09-19%20073834.png" width="400"></td>
+  </tr>
+  <tr>
+    <td><img src="./Task_results/Screenshot%202023-09-19%20073913.png" width="400"></td>
+    <td><img src="./Task_results/Screenshot%202023-09-19%20073938.png" width="400"></td>
+  </tr>
+</table>
+
+
